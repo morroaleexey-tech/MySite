@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>SviyGruz</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Свій Вантаж</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  
+<div class="burger-menu" onclick="toggleMenu()">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</div>
+
+<!-- Боковое меню -->
+<nav class="side-menu" id="side-menu">
+  <a href="#tariffs" onclick="toggleMenu()">Тарифи</a>
+  <a href="#about" onclick="toggleMenu()">Про нас</a>
+  <a href="#services" onclick="toggleMenu()">Наші послуги</a>
+  <a href="#order" onclick="toggleMenu()">Як замовити</a>
+  <a href="#request">Онлайн-заявка</a>
+  <a href="#contacts" onclick="toggleMenu()">Контакти</a>
+</nav>
+
+<main>
+  
+<header>
+  <div class="header-top">
+    
+    <!-- Лого -->
+    <div class="header-title">
+      <img src="https://i.postimg.cc/d327q5dk/Copilot-20250808-160331.png" 
+           alt="Свій Вантаж" class="site-title-img">
+    </div>
+
+    <!-- Центр: Слоган + Города -->
+    <div class="header-center">
+      <p class="header-slogan">Надійні вантажні перевезення по Україні</p>
+      <div class="header-cities-inline">
+        Київ <span class="separator">|</span> Одеса <span class="separator">|</span> Львів
+      </div>
+    </div>
+
+    <!-- Телефоны -->
+    <div class="phone-wrapper">
+      <a href="tel:+380662435711" class="phone-header">
+        +38 (066) 243-57-11
+      </a>
+      <a href="tel:+380662435711" class="phone-header">
+        +38 (067) 345-90-27
+      </a>
+    </div>
+
+  </div>
+</header>
+
+<section class="tariffs section" id="tariffs">
+  <h2>Наші тарифи</h2>
+  <div class="tariff-grid">
+    <!-- 1. Вантажники -->
+    <div class="tariff-card">
+      <img src="https://i.postimg.cc/FK5FXwJs/photo-5217649485658846411-y.jpg" alt="Вантажники">
+      <h3>Вантажники</h3>
+      <div class="tariff-subtitle">Тарифи</div>
+      <div class="tariff-price">Від 180 грн/год</div>
+      <div class="tariff-desc">
+        Допомога з перенесенням меблів, техніки та інших вантажів.
+      </div>
+    </div>
+<!-- 3. Мікроавтобус 0.8 Т -->
+    <div class="tariff-card">
+      <img src="https://i.postimg.cc/sfpFG18m/depositphotos-282202974-stock-photo-white-french-van-side-view.webp" alt="Мікроавтобус 0.8 Т">
+      <h3>Мікроавтобус 0.8 Т</h3>
+      <div class="tariff-subtitle">Тарифи</div>
+      <div class="tariff-price">Від 700 грн/2год</div>
+      <div class="tariff-desc">
+        Ідеально підходить для малих переїздів та дрібних перевезень.
+      </div>
+    </div>
+    
+  <!-- 5. Мікроавтобус 1.5-3 Т -->
+    <div class="tariff-card">
+      <img src="https://i.postimg.cc/ZqypKkR9/ef4f0123172175f4adf2c205c05eb33e62888eb8.jpg" alt="Мікроавтобус 1.5-3 Т">
+      <h3>Мікроавтобус 1.5-3 Т</h3>
+      <div class="tariff-subtitle">Тарифи</div>
+      <div class="tariff-price">Від 900 грн/2 год</div>
+      <div class="tariff-desc">
+        Підходить для середніх та великих квартирних переїздів.
+      </div>
+    </div>
+   
+   <!-- 7. Газель 2 Т -->
+    <div class="tariff-card">
+      <img src="https://i.postimg.cc/VL7TQtp7/image.jpg" alt="Газель 2 Т">
+      <h3>Газель 2 Т</h3>
+      <div class="tariff-subtitle">Тарифи</div>
+      <div class="tariff-price">Від 1250 грн/2 год</div>
+      <div class="tariff-desc">
+        Більший об’єм для важких та габаритних вантажів.
+      </div>
+    </div>  
+                              
+    <!-- 2. Різноробочі -->
+    <div class="tariff-card">
+      <img src="https://i.postimg.cc/mkCfjg8Y/photo-5217649485658846416-y.jpg" alt="Різноробочі">
+      <h3>Різноробочі</h3>
+      <div class="tariff-subtitle">Тарифи</div>
+      <div class="tariff-price">Від 160 грн/год</div>
+      <div class="tariff-desc">
+        Виконання дрібних робіт: навантаження, розвантаження, прибирання.
+      </div>
+    </div>
+    
+    <!-- 4. Мікроавтобус 1.2 Т -->
+    <div class="tariff-card">
+      <img src="https://i.postimg.cc/g2JCns3F/vantazhne-taksi-kyyiv-vartist-1.jpg" alt="Мікроавтобус 1.2 Т">
+      <h3>Мікроавтобус 1.2 Т</h3>
+      <div class="tariff-subtitle">Тарифи</div>
+      <div class="tariff-price">Від 800 грн/2 год</div>
+      <div class="tariff-desc">
+        Для перевезення більшого об'єму меблів та речей.
+      </div>
+    </div>
+
+    <!-- 6. Газель 1.2 Т -->
+    <div class="tariff-card">
+      <img src="https://i.postimg.cc/Bb3xVhJj/453-btypuadsrundm7gb44zjr82.png" alt="Газель 1.2 Т">
+      <h3>Газель 1.2 Т</h3>
+      <div class="tariff-subtitle">Тарифи</div>
+      <div class="tariff-price">Від 1100 грн/2 год</div>
+      <div class="tariff-desc">
+        Для перевезення меблів, побутової техніки та будматеріалів.
+      </div>
+    </div>
+
+    <!-- 8. Фури 5/10 Т -->
+    <div class="tariff-card">
+      <img src="https://i.postimg.cc/Kc5qyTw6/photo-5217649485658846380-x.jpg" alt="Фури 5/10Т">
+      <h3>Фури 5/10Т</h3>
+      <div class="tariff-subtitle">Тарифи</div>
+      <div class="tariff-price">
+        5т – від 2800 грн/3 год<br>
+        10т – від 4000 грн/4 год
+      </div>
+      <div class="tariff-desc">
+        Великі фури для масових переїздів і вантажних перевезень.
+      </div>
+    </div>
+  </div>
+</section>  
+  
+<section class="about section" id="about">
+  <h2>Про нас</h2>
+  <p>
+    Служба вантажних перевезень <strong>“Свій Вантаж”</strong> – це команда
+    відповідальних професіоналів, яка працює по всій Україні. 
+  </p>
+  <p>
+   Ми надаємо повний спектр послуг: від простих перевезень меблів та техніки до комплексних квартирних і офісних переїздів з вантажниками, пакуванням, зборкою/розборкою меблів та розвантаженням. Для кожного клієнта ми підбираємо оптимальний транспорт – від компактних мікроавтобусів до великих вантажівок.
+  </p>
+  <p>
+    Чому нас обирають:
+  </p>
+  <ul style="text-align: left; display: inline-block; margin-top: 10px;">
+    <li>Більше 10.000 тисяч виконаних замовлень</li>
+    <li>Багаторічний досвід роботи</li>
+    <li>Швидке реагування на замовлення та робота без вихідних</li>
+    <li>Обережність та безпека при перевезенні речей</li>
+    <li>Прозорі тарифи без прихованих платежів</li>
+  </ul>
+  <p style="margin-top: 15px;">
+    Ми цінуємо час та довіру наших клієнтів і робимо все, щоб переїзд був легким,
+    швидким та комфортним.
+  </p>
+</section>
+
+<section class="slogan">
+  <div class="slogan-line top">
+  Швидко, надійно та без зайвого клопоту!
+</div>
+
+</section>               
+                     
+<section class="services section" id="services">
+  <h2>Наші послуги</h2>
+  <div class="service-list">
+    <div class="service-card">
+      <img src="https://i.ibb.co/jZ5yqp9d/photo-5208643050908285895-y.jpg" alt="Квартирний переїзд">
+      <h3>Квартирний переїзд</h3>
+      <p>Організуємо швидкий та комфортний переїзд для Вас. 
+Обережне перевезення меблів, техніки, речей, шаф, холодильників та навісної кухні, </p>
+    </div>
+    <div class="service-card">
+      <img src="https://i.ibb.co/1fqKxWqg/photo-5208643050908285893-y.jpg" alt="Офісний переїзд">
+      <h3>Офісний переїзд</h3>
+      <p>Перевеземо усі необхідні меблі, речі, компʼютери, квіти, та документацію на нове місце роботи.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://i.ibb.co/HfG00HGX/photo-5208643050908285896-y.jpg" alt="Доставка товарів">
+      <h3>Доставка товарів</h3>
+      <p>Доставляємо ваші товари по місту та області швидко та надійно.</p>
+    </div>
+    <div class="service-card">
+      <img src="https://i.ibb.co/YFPwK7Nb/photo-5208643050908285900-x.jpg" alt="Послуги вантажників">
+      <h3>Послуги вантажників</h3>
+      <p>Наші вантажники завжди готові допомогти з переїздом будь якої складності, розібрати та зібрати меблі - не проблема, спустити по сходах - не проблема, чекаємо саме на Ваше замовлення! </p>
+    </div>
+    <div class="service-card">
+      <img src="https://i.ibb.co/HL2r9zzw/photo-5208643050908285904-y.jpg" alt="Різноробочі">
+      <h3>Різноробочі</h3>
+      <p>Замовляйте надійного помічника з будь якої роботи, та будь якої складності!</p>
+    </div>
+    <div class="service-card">
+      <img src="https://i.ibb.co/ksVSmXHY/photo-5208705491142834916-x.jpg" alt="Великогабаритні перевезення">
+      <h3>Великогабаритні перевезення</h3>
+      <p>Перевезення великих, важких та нестандартних вантажів з дотриманням безпеки.</p>
+    </div>
+  </div>
+</section>
+ 
+<section class="slogan">
+ <div class="slogan-line bottom">
+  Переїзд без стресу — довірте це професіоналам!
+</div>
+</section>                                                                                                            
+<section class="order-steps section" id="order">
+  <h2>Як замовити послугу</h2>
+  <div class="steps-list">
+    <div class="step-card">
+      <div class="step-number">1</div>
+      <h3>Зателефонуйте або напишіть</h3>
+      <p>Зв’яжіться з нами за телефоном або у Telegram для консультації.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">2</div>
+      <h3>Обговорення деталей</h3>
+      <p>Розкажіть про обсяг вантажу, дату та місце перевезення.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">3</div>
+      <h3>Підтвердження замовлення</h3>
+      <p>Погоджуємо ціну та підтверджуємо дату виїзду.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-number">4</div>
+      <h3>Виконання перевезення</h3>
+      <p>Наша команда швидко виконає замовлення.</p>
+    </div>
+  </div>
+  </section>
+  
+<section class="reviews section" id="reviews">
+  <h2>Відгуки клієнтів</h2>
+  <div class="slider">
+    <div class="slide active">
+      <img src="https://i.postimg.cc/2yKGqVRv/photo-5226495271452670876-x-1.jpg" alt="Олена">
+      <h3>Олена</h3>
+      <div class="stars">★★★★★</div>
+      <p>Замовляла переїзд, хлопці приїхали швидко, все погрузили у газель та довезли до іншої адреси! Швидко та не дорого, рекомендую!</p>
+    </div>
+    <div class="slide">
+      <img src="https://i.postimg.cc/2yKGqVRv/photo-5226495271452670876-x-1.jpg" alt="Ігор">
+      <h3>Ігор</h3>
+      <div class="stars">★★★★★</div>
+      <p>Брали помощника на смену, приехал толковый и отличный парень, спасибо!</p>
+    </div>
+    <div class="slide">
+      <img src="https://i.postimg.cc/2yKGqVRv/photo-5226495271452670876-x-1.jpg" alt="Марія">
+      <h3>Марія</h3>
+      <div class="stars">★★★★★</div>
+      <p>Приїхала машина, чиста та габаритна, перевозили диван та холодильник, все швидко та чудово</p>
+    </div>
+
+    <button class="prev">&#10094;</button>
+<button class="next">&#10095;</button>
+
+    <!-- Индикаторы -->
+    <div class="dots" id="dots"></div>
+  </div>
+</section>
+
+  <section class="request section" id="request"> 
+  <h2>Онлайн-заявка</h2>
+  <form class="request-form" id="request-form">
+    <input type="text" name="Ім'я" placeholder="Ваше ім'я" required>
+    <input type="tel" name="Телефон" placeholder="Телефон" required>
+    <textarea name="Опис" rows="4" placeholder="Опис роботи і маршруту" required></textarea>
+    <button type="submit">Відправити заявку</button>
+  </form>
+
+  <div id="success-message" class="success-message" style="display: none;">
+    ✅ Заявка успішно надіслана! Ми зв'яжемось з вами найближчим часом.
+  </div>
+</section>
+  </main>
+
+<footer id="contacts">
+  <div class="footer-container">
+    <!-- Левая колонка -->
+    <div class="footer-left">
+      <div class="footer-title">
+        <span class="vertical-line"></span>
+        <h3>Свій Вантаж</h3>
+      </div>
+      <p class="footer-desc">
+        Наша диспетчерська служба завжди на зв'язку, працює без вихідних і готова оперативно проконсультувати, а також відповісти на всі питання, що Вас цікавлять.
+      </p>
+      <div class="social-buttons">
+        <a href="https://t.me/SviyGruz" target="_blank" class="social-icon telegram" title="Telegram">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+        </a>
+        <a href="viber://chat?number=+380662435711" class="social-icon viber" title="Viber">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSghvDeWEjYjWRYWxNGXbXYUb4B0n0E91tosH7H-JEGF7FOk0Wo7r4IIVDVkvNr-iTpdlo&usqp=CAU" alt="Viber">
+        </a>
+        <a href="https://wa.me/380662435711" target="_blank" class="social-icon whatsapp" title="WhatsApp">
+          <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+        </a>
+      </div>
+    </div>
+
+    <!-- Правая колонка -->
+    <div class="footer-right">
+      <div class="footer-title">
+        <span class="vertical-line"></span>
+        <h3>Контакти</h3>
+      </div>
+      <p>Vodafone: <a href="tel:+380662435711">+38 (066) 243-57-11</a></p>
+      <p>Kyivstar: <a href="tel:+380673459027">+38 (067) 345-90-27</a></p>
+      <p>Email: <a href="mailto:info@tribogatiri.ua">svijvantaz@gmail.com</a></p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Три Богатирі. Всі права захищені.
+  </div>
+</footer>
+
+<div class="floating-buttons">
+  <div class="floating-call-wrapper">
+    <button class="floating-call-icon" onclick="showPhoneNumber()">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24">
+        <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 
+        1 0 011.05-.24 11.36 11.36 0 003.56.57 1 1 0 011 1v3.5a1 
+        1 0 01-1 1A17 17 0 013 5a1 1 0 011-1h3.5a1 1 0 011 1 
+        11.36 11.36 0 00.57 3.56 1 1 0 01-.24 1.05l-2.21 2.18z"/>
+      </svg>
+    </button>
+
+    <a href="tel:+380662435711" class="phone-number" id="phone-number">
+      +38 (066) 243-57-11
+    </a>
+  </div>
+
+  <!-- Кнопки мессенджеров -->
+  <div class="floating-messengers">
+    <a href="https://t.me/SviyGruz" title="Telegram" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram">
+    </a>
+    <a href="viber://chat?number=+380662435711" title="Viber" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/3670/3670059.png" alt="Viber">
+    </a>
+    <a href="https://wa.me/380662435711" title="WhatsApp" target="_blank">
+      <img src="https://i.ibb.co/CpBRXNGR/png-clipart-computer-icons-whatsapp-whatsapp-text-trademark-thumbnail.png" alt="WhatsApp">
+    </a>
+  </div>
+</div>
+
+<div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+<div class="callback-popup" id="callback-popup">
+  <span class="close-popup" id="close-popup">&times;</span>
+  <p>Бажаєте, ми наберемо Вас протягом хвилини?</p>
+  <form id="popup-form">
+    <input type="text" id="popup-phone" name="Телефон" placeholder="Ваш телефон" required>
+    <button type="submit">Чекаю на дзвінок</button>
+  </form>
+</div>
+
+<script>
+  const BOT_TOKEN = "8165871285:AAFtFfCJovk8ICLTnnuxg6sUi9iL6LzW2NI";
+  const CHAT_ID = "7894038834";
+  const TELEGRAM_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
+
+  function sendToTelegram(message) {
+    return fetch(TELEGRAM_API, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: CHAT_ID,
+        text: message,
+        parse_mode: "HTML"
+      })
+    });
+  }
+
+  // === Онлайн-заявка ===
+  const form = document.getElementById('request-form');
+  const success = document.getElementById('success-message');
+  if (form && success) {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      let message = "📦 <b>Нова заявка з сайту</b>\n";
+      formData.forEach((value, key) => {
+        message += `${key}: ${value}\n`;
+      });
+
+      sendToTelegram(message).then(() => {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      });
+    });
+  }
+
+  // === Попап ===
+  const popup = document.getElementById('callback-popup');
+  const closeBtn = document.getElementById('close-popup');
+  const popupForm = document.getElementById('popup-form');
+  const popupPhone = document.getElementById('popup-phone');
+
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      popup.classList.add('show');
+    }, 7000);
+  });
+
+  closeBtn.addEventListener('click', () => {
+    popup.classList.remove('show');
+  });
+
+  popupForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const phone = popupPhone.value.trim();
+    if (phone) {
+      sendToTelegram(`📞 <b>Запит дзвінка</b>\nТелефон: ${phone}`).then(() => {
+        alert("Дякуємо! Ми зателефонуємо найближчим часом.");
+        popupForm.reset();
+        popup.classList.remove('show');
+      });
+    }
+  });
+</script>
+
+<script src="script.js"></script>
+                       
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
