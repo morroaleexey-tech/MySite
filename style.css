@@ -1139,9 +1139,14 @@ footer {
     font-size: 15px;
   }
 
-  .close-popup {
-    top: 4px;
-    right: 8px;
-    font-size: 16px;
+ .close-popup {
+    top: 2px;         /* чуть выше */
+    right: 4px;       /* ближе к краю */
+    font-size: 26px;  /* крупный и удобный */
+    width: 36px;      /* кликабельная зона */
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
