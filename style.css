@@ -659,11 +659,12 @@ footer {
 }
 
 .callback-popup input {
-  width: 100%;
+  width: calc(100% - 4px); /* убавляем ширину на отступы рамки */
   padding: 8px;
   margin-bottom: 10px;
   border: 1px solid #cce7ff;
   border-radius: 6px;
+  box-sizing: border-box; /* чтобы padding учитывался в ширине */
 }
 
 .callback-popup button {
@@ -685,7 +686,12 @@ footer {
   position: absolute;
   top: 6px;
   right: 10px;
-  font-size: 18px;
+  font-size: 28px; /* увеличиваем сам символ */
+  width: 36px; /* ширина кликабельной зоны */
+  height: 36px; /* высота кликабельной зоны */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: #555;
 }
@@ -693,6 +699,7 @@ footer {
 .close-popup:hover {
   color: black;
 }
+
 
 /* === БУРГЕР-МЕНЮ === */
 .burger-menu {
