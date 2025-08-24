@@ -130,20 +130,42 @@ document.addEventListener('DOMContentLoaded', () => {
   showOnScroll();
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const cards = document.querySelectorAll(".tariff-card");
+(function () {
+  // Не даём инициализировать повторно
+  if (window.__tariffsInit) return;
+  window.__tariffsInit = true;
 
-  cards.forEach(card => {
-    card.addEventListener("click", function () {
-      // если уже активна — просто убрать класс
-      if (card.classList.contains("active")) {
-        card.classList.remove("active");
-        return;
+  const grid = document.querySelector('.tariff-grid');
+  if (!grid) return;
+
+  // Клики включаем только на тач-устройствах (на ПК работает hover)
+  const clickMode = window.matchMedia('(hover: none), (pointer: coarse)').matches;
+
+  if (clickMode) {
+    grid.addEventListener('click', function (e) {
+      // Навигацию по кнопке пропускаем
+      if (e.target.closest('.order-btn')) return;
+
+      const card = e.target.closest('.tariff-card');
+      if (!card) return;
+
+      // Гасим другие обработчики, которые могли остаться
+      e.stopPropagation();
+
+      if (card.classList.contains('active')) {
+        card.classList.remove('active');           // повторный тап — закрыть
+      } else {
+        document.querySelectorAll('.tariff-card.active')
+          .forEach(c => c.classList.remove('active'));
+        card.classList.add('active');              // открыть текущую
       }
+    }, { capture: true, passive: true });
+  }
 
-      // иначе убрать класс у всех и активировать только текущую
-      cards.forEach(c => c.classList.remove("active"));
-      card.classList.add("active");
-    });
-  });
-});
+  // Клик вне карточки закрывает открытые (актуально для тача)
+  document.addEventListener('click', function (e) {
+    if (e.target.closest('.tariff-card')) return;
+    document.querySelectorAll('.tariff-card.active')
+      .forEach(c => c.classList.remove('active'));
+  }, { passive: true });
+})();
