@@ -1,21 +1,53 @@
-<!DOCTYPE html>
-<html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>SviyGruz</title>
-  <link rel="stylesheet" href="./style.css">
 
-</head>
-<body>
-<!-- partial:index.partial.html -->
 <html lang="uk">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17435574872"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17435574872');
+  </script>
+
+  <!-- Event snippet for отслеживание кликов -->
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-17435574872/nwwFCOufsYgbENiE9_lA',
+        'value': 1.0,
+        'currency': 'UAH',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Свій Вантаж</title>
-  <link rel="stylesheet" href="style/style.css">
+
+  <!-- SEO теги -->
+  <title>Свій Вантаж | Вантажні перевезення та переїзди по Україні</title>
+  <meta name="description" content="Вантажні перевезення Київ та Одеса. Квартирні переїзди, перевезення меблів, вантажники. Вантажне таксі та вивіз сміття. Надійно і швидко">
+
+  <!-- Дополнительно -->
+  <meta name="robots" content="index, follow">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+  <!-- Стили -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   
 <div class="burger-menu" onclick="toggleMenu()">
   <span class="bar"></span>
@@ -64,87 +96,124 @@
 
   </div>
 </header>
-
+  
 <section class="tariffs section" id="tariffs">
   <h2>Наші тарифи</h2>
   <div class="tariff-grid">
+
     <!-- 1. Вантажники -->
     <div class="tariff-card">
       <img src="https://i.postimg.cc/FK5FXwJs/photo-5217649485658846411-y.jpg" alt="Вантажники">
       <h3>Вантажники</h3>
       <div class="tariff-subtitle">Тарифи</div>
       <div class="tariff-price">Від 180 грн/год</div>
-      <div class="tariff-desc">
-        Наші вантажники з легкістю допоможуть Вам з розвантаженням/завантажнням Ваших особистих речей, побутової техніки, меблів та габаритних речей.
+
+      <div class="tariff-details">
+        <p>Мінімальне замовлення: 2 год</p>
+        <p>Якщо відстань більше 25 м: доплата</p>
+        <p>По поверхах: +50 грн/поверх</p>
       </div>
+
+      <a href="#request" class="order-btn">Замовити</a>
     </div>
-<!-- 3. Мікроавтобус 0.8 Т -->
-    <div class="tariff-card">
-      <img src="https://i.postimg.cc/sfpFG18m/depositphotos-282202974-stock-photo-white-french-van-side-view.webp" alt="Мікроавтобус 0.8 Т">
-      <h3>Мікроавтобус 0.8Т</h3>
-      <div class="tariff-subtitle">Тарифи</div>
-      <div class="tariff-price">Від 700 грн/2год</div>
-      <div class="tariff-desc">
-Оптимальний варіант для невеликих переїздів, перевезення особистих речей, коробок, сумок та іншого дрібного вантажу у межах міста.
-      </div>
-    </div>
-    
-  <!-- 5. Мікроавтобус 1.5-3 Т -->
-    <div class="tariff-card">
-      <img src="https://i.postimg.cc/ZqypKkR9/ef4f0123172175f4adf2c205c05eb33e62888eb8.jpg" alt="Мікроавтобус 1.5-3 Т">
-      <h3>Мікроавтобус 1.5-3Т</h3>
-      <div class="tariff-subtitle">Тарифи</div>
-      <div class="tariff-price">Від 900 грн/2 год</div>
-      <div class="tariff-desc">
-Ідеально підходить для великих квартирних переїздів з меблями, побутовою технікою та іншими об’ємними вантажами. 
-      </div>
-    </div>
-   
-   <!-- 7. Газель 2 Т -->
-    <div class="tariff-card">
-      <img src="https://i.postimg.cc/VL7TQtp7/image.jpg" alt="Газель 2 Т">
-      <h3>Газель 2Т</h3>
-      <div class="tariff-subtitle">Тарифи</div>
-      <div class="tariff-price">Від 1250 грн/2 год</div>
-      <div class="tariff-desc">
-Найкраще рішення для переїзду великого офісу, транспортування меблів, техніки та іншого габаритного вантажу. Все швидко та надійно!
-      </div>
-    </div>  
-                              
+
     <!-- 2. Різноробочі -->
     <div class="tariff-card">
       <img src="https://i.postimg.cc/mkCfjg8Y/photo-5217649485658846416-y.jpg" alt="Різноробочі">
       <h3>Різноробочі</h3>
       <div class="tariff-subtitle">Тарифи</div>
       <div class="tariff-price">Від 160 грн/год</div>
-      <div class="tariff-desc">
-Майстри з будь-якої роботи та складності, оперативно допоможуть Вам з ремонтом, побутовими справами, прибиранням території, прибиранням будівельного сміття, підсобними роботами.
+
+      <div class="tariff-details">
+        <p>Мінімальне замовлення: 2 год</p>
+        <p>Якщо відстань більше 25 м: доплата</p>
+        <p>По поверхах: +50 грн/поверх</p>
       </div>
+
+      <a href="#request" class="order-btn">Замовити</a>
     </div>
-    
-    <!-- 4. Мікроавтобус 1.2 Т -->
+
+    <!-- 3. Мікроавтобус 0.8Т -->
     <div class="tariff-card">
-      <img src="https://i.postimg.cc/g2JCns3F/vantazhne-taksi-kyyiv-vartist-1.jpg" alt="Мікроавтобус 1.2 Т">
+      <img src="https://i.postimg.cc/sfpFG18m/depositphotos-282202974-stock-photo-white-french-van-side-view.webp" alt="Мікроавтобус 0.8Т">
+      <h3>Мікроавтобус 0.8Т</h3>
+      <div class="tariff-subtitle">Тарифи</div>
+      <div class="tariff-price">Від 700 грн/2год</div>
+
+      <div class="tariff-details">
+        <p>Мінімальне замовлення: 2 год</p>
+        <p>Ціна за км в області: 14 грн</p>
+        <p>Додаткова точка завантаження: 200 грн</p>
+      </div>
+
+      <a href="#request" class="order-btn">Замовити</a>
+    </div>
+
+    <!-- 4. Мікроавтобус 1.2Т -->
+    <div class="tariff-card">
+      <img src="https://i.postimg.cc/g2JCns3F/vantazhne-taksi-kyyiv-vartist-1.jpg" alt="Мікроавтобус 1.2Т">
       <h3>Мікроавтобус 1.2Т</h3>
       <div class="tariff-subtitle">Тарифи</div>
       <div class="tariff-price">Від 800 грн/2 год</div>
-      <div class="tariff-desc">
-Підходить для перевезення середнього обсягу, коробок, побутової техніки та меблів. Зручний для квартирних чи офісних переїздів, транспортування габаритних предметів, а також при доставці замовлень.
+
+      <div class="tariff-details">
+        <p>Мінімальне замовлення: 2 год</p>
+        <p>Ціна за км в області: 16 грн</p>
+        <p>Додаткова точка завантаження: 200 грн</p>
       </div>
+
+      <a href="#request" class="order-btn">Замовити</a>
     </div>
 
-    <!-- 6. Газель 1.2 Т -->
+    <!-- 5. Мікроавтобус 1.5-3Т -->
     <div class="tariff-card">
-      <img src="https://i.postimg.cc/Bb3xVhJj/453-btypuadsrundm7gb44zjr82.png" alt="Газель 1.2 Т">
+      <img src="https://i.postimg.cc/ZqypKkR9/ef4f0123172175f4adf2c205c05eb33e62888eb8.jpg" alt="Мікроавтобус 1.5-3Т">
+      <h3>Мікроавтобус 1.5-3Т</h3>
+      <div class="tariff-subtitle">Тарифи</div>
+      <div class="tariff-price">Від 900 грн/2 год</div>
+
+      <div class="tariff-details">
+        <p>Мінімальне замовлення: 2 год</p>
+        <p>Ціна за км в області: 18 грн</p>
+        <p>Додаткова точка завантаження: 250 грн</p>
+      </div>
+
+      <a href="#request" class="order-btn">Замовити</a>
+    </div>
+
+    <!-- 6. Газель 1.2Т -->
+    <div class="tariff-card">
+      <img src="https://i.postimg.cc/Bb3xVhJj/453-btypuadsrundm7gb44zjr82.png" alt="Газель 1.2Т">
       <h3>Газель 1.2Т</h3>
       <div class="tariff-subtitle">Тарифи</div>
       <div class="tariff-price">Від 1100 грн/2 год</div>
-      <div class="tariff-desc">
- Ідеальний варіант для перевезення важких або об’ємних предметів, меблів, побутової техніки та обладнання. Підходить для переїзду офісів чи квартир, доставки товарів, будматеріалів та великої кількості різноманітних речей.
+
+      <div class="tariff-details">
+        <p>Мінімальне замовлення: 2 год</p>
+        <p>Ціна за км в області: 20 грн</p>
+        <p>Додаткова точка завантаження: 250 грн</p>
       </div>
+
+      <a href="#request" class="order-btn">Замовити</a>
     </div>
 
-    <!-- 8. Фури 5/10 Т -->
+    <!-- 7. Газель 2Т -->
+    <div class="tariff-card">
+      <img src="https://i.postimg.cc/VL7TQtp7/image.jpg" alt="Газель 2Т">
+      <h3>Газель 2Т</h3>
+      <div class="tariff-subtitle">Тарифи</div>
+      <div class="tariff-price">Від 1250 грн/2 год</div>
+
+      <div class="tariff-details">
+        <p>Мінімальне замовлення: 2 год</p>
+        <p>Ціна за км в області: 22 грн</p>
+        <p>Додаткова точка завантаження: 300 грн</p>
+      </div>
+
+      <a href="#request" class="order-btn">Замовити</a>
+    </div>
+
+    <!-- 8. Фури 5/10Т -->
     <div class="tariff-card">
       <img src="https://i.postimg.cc/Kc5qyTw6/photo-5217649485658846380-x.jpg" alt="Фури 5/10Т">
       <h3>Фури 5/10Т</h3>
@@ -153,13 +222,18 @@
         5т – від 2800 грн/3 год<br>
         10т – від 4000 грн/4 год
       </div>
-      <div class="tariff-desc">
-Вибір для міжміських габаритних перевезень, перевезень будматеріалів, промислового обладнання, перевезень товару для бізнесу та магазинів, великої кількості меблів, та побутової техніки.
+
+      <div class="tariff-details">
+        <p>Мінімальне замовлення: 3-4 год</p>
+        <p>Ціна за км в області: 28-40 грн</p>
+        <p>Додаткова точка завантаження: 400 грн</p>
       </div>
+
+      <a href="#request" class="order-btn">Замовити</a>
     </div>
+
   </div>
-</section>  
-  
+</section>
   
 <section class="about section" id="about">
   <h2>Про нас</h2>
@@ -297,7 +371,7 @@
     <input type="text" name="Ім'я" placeholder="Ваше ім'я" required>
     <input type="tel" name="Телефон" placeholder="Телефон" required>
     <textarea name="Опис" rows="4" placeholder="Опис роботи і маршруту" required></textarea>
-    <button type="submit">Відправити заявку</button>
+    <button type="submit">Замовити</button>
   </form>
 
   <div id="success-message" class="success-message" style="display: none;">
@@ -349,6 +423,7 @@
 </footer>
 
 <div class="floating-buttons">
+  <!-- Кнопка телефона -->
   <div class="floating-call-wrapper">
     <button class="floating-call-icon" onclick="showPhoneNumber()">
       <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" viewBox="0 0 24 24">
@@ -359,9 +434,11 @@
       </svg>
     </button>
 
-    <a href="tel:+380662435711" class="phone-number" id="phone-number">
-      +38 (066) 243-57-11
-    </a>
+    <!-- Контейнер с номерами -->
+    <div class="phone-numbers" id="phone-numbers" style="display: none;">
+      <a href="tel:+380662435711">+38 (066) 243-57-11</a>
+      <a href="tel:+380673459027">+38 (067) 345-90-27</a>
+    </div>
   </div>
 
   <!-- Кнопки мессенджеров -->
@@ -390,6 +467,7 @@
 </div>
 
 <script>
+
   const BOT_TOKEN = "8165871285:AAFtFfCJovk8ICLTnnuxg6sUi9iL6LzW2NI";
   const CHAT_ID = "7894038834";
   const TELEGRAM_API = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
@@ -452,14 +530,10 @@
       });
     }
   });
-</script>
-
-<script src="script.js"></script>
-                       
-</body>
-</html>
-<!-- partial -->
-  <script  src="./script.js"></script>
-
+</script>         
+  
+    <!-- Подключение внешнего скрипта -->
+<script src="script.js" defer></script>
+  
 </body>
 </html>
