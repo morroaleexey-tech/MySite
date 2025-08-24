@@ -1,9 +1,10 @@
 // === Плавающая кнопка телефона ===
 window.showPhoneNumber = function () {
-  const number = document.getElementById('phone-number');
-  number.style.display =
-    number.style.display === 'inline-block' ? 'none' : 'inline-block';
+  const numbers = document.getElementById('phone-numbers');
+  numbers.style.display =
+    numbers.style.display === 'block' ? 'none' : 'block';
 };
+
 
 // === Боковое меню ===
 window.toggleMenu = function () {
@@ -127,4 +128,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('scroll', showOnScroll);
   showOnScroll();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const cards = document.querySelectorAll(".tariff-card");
+
+  cards.forEach(card => {
+    card.addEventListener("click", function () {
+      // если уже активна — просто убрать класс
+      if (card.classList.contains("active")) {
+        card.classList.remove("active");
+        return;
+      }
+
+      // иначе убрать класс у всех и активировать только текущую
+      cards.forEach(c => c.classList.remove("active"));
+      card.classList.add("active");
+    });
+  });
 });
