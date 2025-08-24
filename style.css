@@ -193,10 +193,6 @@ header {
   overflow: hidden; /* чтобы скрывать детали за границами */
 }
 
-.tariff-card:hover {
-  transform: translateY(-5px);
-}
-
 .tariff-card img {
   max-width: 100%;
   height: 140px;
@@ -259,24 +255,34 @@ header {
   transition: opacity 0.3s ease;
   text-align: center;
   line-height: 1.5;
+  pointer-events: none; /* чтобы слой не блокировал тап */
 }
 
-/* Показываем детали при наведении и на мобильном при active */
-.tariff-card:hover .tariff-details,
+/* === Показываем детали при active (мобильные) === */
 .tariff-card.active .tariff-details {
   opacity: 1;
 }
-
-/* Прячем обычное содержимое при наведении */
-.tariff-card:hover img,
-.tariff-card:hover h3,
-.tariff-card:hover .tariff-subtitle,
-.tariff-card:hover .tariff-price,
 .tariff-card.active img,
 .tariff-card.active h3,
 .tariff-card.active .tariff-subtitle,
 .tariff-card.active .tariff-price {
   opacity: 0;
+}
+
+/* === Ховер-эффекты только на десктопах === */
+@media (hover: hover) and (pointer: fine) {
+  .tariff-card:hover {
+    transform: translateY(-5px);
+  }
+  .tariff-card:hover .tariff-details {
+    opacity: 1;
+  }
+  .tariff-card:hover img,
+  .tariff-card:hover h3,
+  .tariff-card:hover .tariff-subtitle,
+  .tariff-card:hover .tariff-price {
+    opacity: 0;
+  }
 }
 
 /* === ШАГИ ЗАКАЗА / "ЯК ЗАМОВИТИ" === */
