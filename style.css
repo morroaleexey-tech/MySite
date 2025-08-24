@@ -157,6 +157,7 @@ header {
   color: #444;
   margin-top: 10px;
 }
+
 /* === ТАРИФЫ === */
 .tariffs {
   text-align: center;
@@ -179,13 +180,17 @@ header {
 
 .tariff-card {
   background: white;
-  padding: 20px;
+  padding: 22px;
   border-radius: 15px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: center;
+  min-height: 360px; /* одинаковая высота всех карточек */
+  position: relative;
+  overflow: hidden; /* чтобы скрывать детали за границами */
 }
 
 .tariff-card:hover {
@@ -195,7 +200,7 @@ header {
 .tariff-card img {
   max-width: 100%;
   height: 140px;
-  object-fit: contain; /* вписывает целиком */
+  object-fit: contain;
   margin-bottom: 15px;
 }
 
@@ -205,7 +210,6 @@ header {
   margin-bottom: 12px;
 }
 
-/* Новый подзаголовок */
 .tariff-subtitle {
   margin: 12px 0 6px;
   font-size: 16px;
@@ -213,7 +217,6 @@ header {
   color: #444;
 }
 
-/* Цена */
 .tariff-price {
   font-size: 18px;
   font-weight: bold;
@@ -222,12 +225,58 @@ header {
   line-height: 1.5;
 }
 
-/* Описание */
-.tariff-desc {
-  font-size: 15px;
-  color: #555;
-  line-height: 1.4;
-  margin-top: auto; /* чтобы описание не прилипало к цене */
+/* Кнопка заказа */
+.order-btn {
+  display: inline-block;
+  margin-top: auto; /* кнопка всегда внизу */
+  padding: 10px 16px;
+  background: #0077b6;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease, opacity 0.3s ease;
+  position: relative;
+  z-index: 2; /* чтобы кнопка была всегда поверх */
+}
+.order-btn:hover {
+  background: #005f8a;
+}
+
+/* Детали тарифа (по умолчанию скрыты) */
+.tariff-details {
+  position: absolute;
+  inset: 0; /* растягиваем на всю карточку */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* центрируем вертикально */
+  align-items: center;
+  padding: 20px;
+  font-size: 16px; /* увеличенный текст */
+  color: #333;
+  background: white; /* фон, чтобы не просвечивалось содержимое */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Показываем детали при наведении и на мобильном при active */
+.tariff-card:hover .tariff-details,
+.tariff-card.active .tariff-details {
+  opacity: 1;
+}
+
+/* Прячем обычное содержимое при наведении */
+.tariff-card:hover img,
+.tariff-card:hover h3,
+.tariff-card:hover .tariff-subtitle,
+.tariff-card:hover .tariff-price,
+.tariff-card.active img,
+.tariff-card.active h3,
+.tariff-card.active .tariff-subtitle,
+.tariff-card.active .tariff-price {
+  opacity: 0;
 }
 
 /* === ШАГИ ЗАКАЗА / "ЯК ЗАМОВИТИ" === */
@@ -553,12 +602,6 @@ footer {
   align-items: flex-end;
 }
 
-.floating-call-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
 .floating-call-icon {
   background-color: #1694d0;
   border: none;
@@ -597,8 +640,25 @@ footer {
   display: block;
 }
 
-.phone-number {
-  display: none;
+.floating-call-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative; /* ✅ добавляем */
+}
+
+/* контейнер со списком номеров */
+.phone-numbers {
+  display: none; /* скрыт по умолчанию, JS включает */
+  position: absolute;
+  right: 0;
+  bottom: 60px; /* регулируй отступ под свою кнопку */
+  z-index: 1000;
+}
+
+/* оформление ссылок внутри */
+.phone-numbers a {
+  display: block;
   margin-top: 6px;
   background-color: white;
   color: #0077b6;
@@ -608,9 +668,10 @@ footer {
   font-weight: bold;
   font-size: 14px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  white-space: nowrap;
 }
 
-.phone-number:hover {
+.phone-numbers a:hover {
   background-color: #e0f0ff;
 }
 
@@ -699,7 +760,6 @@ footer {
 .close-popup:hover {
   color: black;
 }
-
 
 /* === БУРГЕР-МЕНЮ === */
 .burger-menu {
